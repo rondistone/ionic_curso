@@ -5,15 +5,15 @@
 </ion-header>
 
 <ion-content padding>
-  <form #fc="ngForm" (ngSubmit)="onSubmit(fc)">
+  <form #fc1="ngForm" (ngSubmit)="onSubmit(fc1)">
       <ion-item>
         <ion-label>Cursos</ion-label>
-        <ion-input type="text" name="tipo" [(ngModel)]="servico.tipo" #tipo="ngModel" required></ion-input>
-        <ion-select multiple="true" cancelText="cancelar" okText="Ok">
+      <!-- ion-input type="text" name="tipo" [(ngModel)]="servico.tipo" #tipo="ngModel" ></ion-input -->
+        <ion-select multiple="true" cancelText="cancelar" okText="Ok" name="tipo" [(ngModel)]="servico.tipo" #tipo="ngModel" required>
           <ion-select-option value="mm">Montagem e Manutenção</ion-select-option>
           <ion-select-option value="infob">Informática basica</ion-select-option>
           <ion-select-option value="wd">Word</ion-select-option>
-          <ion-select-option value="ex">Exel</ion-select-option>
+          <ion-select-option value="ex">Excel</ion-select-option>
         </ion-select>
       </ion-item>
 
@@ -24,8 +24,8 @@
     
     <ion-item>
       <ion-label>Periodo</ion-label>
-      <ion-input type="number" name="valor" [(ngModel)]="servico.valor" #valor="ngModel" required></ion-input>
-      <ion-select multiple="true" cancelText="cancelar" okText="Ok">
+      <!-- ion-input type="number" name="valor" [(ngModel)]="servico.valor" #valor="ngModel" ></ion-input -->
+      <ion-select multiple="true" cancelText="cancelar" okText="Ok"  name="valor" [(ngModel)]="servico.valor" #valor="ngModel" required>
       <ion-select-option value="6">6 meses</ion-select-option>
       <ion-select-option value="12">12 meses</ion-select-option>
       </ion-select>
@@ -34,7 +34,7 @@
     <ion-item lines="none"></ion-item>
 
     <ion-item lines="none">
-      <ion-button type="submit" color="primary" [disabled]="fc.invalid">Salvar</ion-button>
+      <ion-button type="submit" color="primary" [disabled]="fc1.invalid">Salvar</ion-button>
       <ion-button type="reset" [routerLink]="[('/tabs/tab3')]" color="primary">Cancelar</ion-button>
     </ion-item>
 
