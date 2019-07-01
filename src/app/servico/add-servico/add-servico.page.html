@@ -6,36 +6,29 @@
 
 <ion-content padding>
   <form #fc="ngForm" (ngSubmit)="onSubmit(fc)">
-    <ion-item>
-      <ion-label position="floating">Descricao</ion-label>
-      <ion-input type="text" name="descricao" [(ngModel)]="servico.descricao" #nome="ngModel" required></ion-input>
-    </ion-item>
-
       <ion-item>
         <ion-label>Cursos</ion-label>
         <ion-input type="text" name="tipo" [(ngModel)]="servico.tipo" #tipo="ngModel" required></ion-input>
         <ion-select multiple="true" cancelText="cancelar" okText="Ok">
-          <ion-select-option value="bacon">Bacon</ion-select-option>
-          <ion-select-option value="olives">Black Olives</ion-select-option>
-          <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-          <ion-select-option value="peppers">Green Peppers</ion-select-option>
-          <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-          <ion-select-option value="onions">Onions</ion-select-option>
-          <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-          <ion-select-option value="pineapple">Pineapple</ion-select-option>
-          <ion-select-option value="sausage">Sausage</ion-select-option>
-          <ion-select-option value="Spinach">Spinach</ion-select-option>
+          <ion-select-option value="mm">Montagem e Manutenção</ion-select-option>
+          <ion-select-option value="infob">Informática basica</ion-select-option>
+          <ion-select-option value="wd">Word</ion-select-option>
+          <ion-select-option value="ex">Exel</ion-select-option>
         </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Descricao</ion-label>
+        <ion-input type="text" name="descricao" [(ngModel)]="servico.descricao" #nome="ngModel" required></ion-input>
       </ion-item>
     
     <ion-item>
-      <ion-label position="floating">Valor</ion-label>
+      <ion-label>Periodo</ion-label>
       <ion-input type="number" name="valor" [(ngModel)]="servico.valor" #valor="ngModel" required></ion-input>
-    </ion-item>
-
-    <ion-item lines="none">
-      <ion-label>Aberto</ion-label>
-      <ion-toggle color="primary" name="ativo" [(ngModel)]="servico.ativo" checked #ativo="ngModel"></ion-toggle>
+      <ion-select multiple="true" cancelText="cancelar" okText="Ok">
+      <ion-select-option value="6">6 meses</ion-select-option>
+      <ion-select-option value="12">12 meses</ion-select-option>
+      </ion-select>
     </ion-item>
 
     <ion-item lines="none"></ion-item>
@@ -44,8 +37,6 @@
       <ion-button type="submit" color="primary" [disabled]="fc.invalid">Salvar</ion-button>
       <ion-button type="reset" [routerLink]="[('/tabs/tab3')]" color="primary">Cancelar</ion-button>
     </ion-item>
-
-    
 
   </form>
 </ion-content>
