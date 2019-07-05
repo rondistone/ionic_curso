@@ -98,6 +98,51 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'cursos/:id',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cursos/cursos/cursos.module#CursosPageModule'
+          }
+        ]
+      },
+      {
+        path: 'mm/:id',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cursos/mm/mm.module#MmPageModule'
+          }
+        ]
+      },
+      {
+        path: 'infob/:id',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cursos/infob/infob.module#InfobPageModule' 
+          }
+        ]
+      },
+      {
+        path: 'word/:id',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cursos/word/word.module#WordPageModule'
+          }
+        ]
+      },
+      {
+        path: 'exel/:id',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cursos/exel/exel.module#ExelPageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

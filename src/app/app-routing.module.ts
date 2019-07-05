@@ -4,7 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'login', loadChildren: './cliente/login/login.module#LoginPageModule' },
-  { path: 'perfil', loadChildren: './cliente/perfil/perfil.module#PerfilPageModule' },
+  { path: 'perfil', loadChildren: './cliente/perfil/perfil.module#PerfilPageModule' },  { path: 'cursos', loadChildren: './cursos/cursos.module#CursosPageModule' },
+  { path: 'word', loadChildren: './cursos/word/word.module#WordPageModule' },
+  { path: 'exel', loadChildren: './cursos/exel/exel.module#ExelPageModule' },
+  { path: 'infob', loadChildren: './cursos/infob/infob.module#InfobPageModule' },
+  { path: 'mm', loadChildren: './cursos/mm/mm.module#MmPageModule' },
+
   
 
   // { path: 'add-servico', loadChildren: './servico/add-servico/add-servico.module#AddServicoPageModule' },
