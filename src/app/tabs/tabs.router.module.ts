@@ -53,6 +53,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'cursos',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cursos/cursos/cursos.module#CursosPageModule'
+          }
+        ]
+      },
+      {
         path: 'addCliente/:id',
         children: [
           {
